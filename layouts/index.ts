@@ -1,1 +1,1 @@
-export * from './guest';
+export { default as GuestLayout } from "./guest";

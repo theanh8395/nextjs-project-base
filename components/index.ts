@@ -1,3 +1,1 @@
-export * from "./icons";
-export * from "./button";
-export * from "./image";
+export * from "./Button";

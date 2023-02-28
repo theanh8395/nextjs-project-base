@@ -1,18 +1,15 @@
-import { Button as ButtonAntd } from "antd";
-import { MouseEvent } from "react";
-import { TButtonProps } from "./button.types";
+import { Button as AntdButton } from "antd";
+import clsx from "clsx";
+import styles from "./styles.module.less";
+import { TButtonProps } from "./Button.types";
 
-const Button = ({ className, onClick, children }: TButtonProps) => {
-  const handleOnClick = (e: MouseEvent<HTMLElement>) => {
-    e.stopPropagation();
-    e.preventDefault();
-    onClick?.(e);
-  };
-
+const Button = ({ type, title, size, styleType }: TButtonProps) => {
   return (
-    <ButtonAntd onClick={handleOnClick} className={className}>
-      {children}
-    </ButtonAntd>
+    <div className={styles.button}>
+      <AntdButton size={size} type={type} className={clsx(styleType)}>
+        {title}
+      </AntdButton>
+    </div>
   );
 };
 

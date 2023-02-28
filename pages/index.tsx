@@ -1,7 +1,6 @@
-import { HomePageContainer, THomePageProps } from '@/containers'
+import colors from "tailwindcss/colors";
+import { HomePage } from "@/page-components";
 
-export default function Home({ title }: THomePageProps) {
-  return (
-    <HomePageContainer title='AD' />
-  )
+export default function Home() {
+  return <HomePage />;
 }

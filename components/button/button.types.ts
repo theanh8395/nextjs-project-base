@@ -1,7 +1,15 @@
-import { MouseEvent, ReactNode } from "react";
+import { SizeType } from "antd/lib/config-provider/SizeContext";
+import { ButtonType } from "antd/lib/button";
+import { EButtonStyleType } from "./Button.enums";
 
 export type TButtonProps = {
-  className?: string; // No Suggest, should handle all style at this component
-  children?: ReactNode;
-  onClick?: (event?: MouseEvent<HTMLElement>) => void;
+  className?: string;
+  title?: string;
+  reverse?: boolean;
+  disabled?: boolean;
+  loading?: boolean;
+  onClick?: () => void;
+  size?: SizeType;
+  type?: ButtonType;
+  styleType?: EButtonStyleType;
 };

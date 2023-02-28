@@ -1,11 +1,3 @@
-import { Fragment } from "react"
+const GuestLayout = () => {};
 
-export const GuestLayout = () => {
-  return (
-    <Fragment>
-      <header>A</header>
-      <main>dd</main>
-      <footer>B</footer>
-    </Fragment>
-  )
-}
+export default GuestLayout;
