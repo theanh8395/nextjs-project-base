@@ -7,7 +7,11 @@ const Button = ({ type, title, size, styleType }: TButtonProps) => {
   return (
     <div className={styles.button}>
       <AntdButton size={size} type={type} className={clsx(styleType)}>
-        {title}
+        <div className="flex items-center justify-center gap-2">
+          <div className="flex-none w-8"></div>
+          <span className="flex-grow">{title}</span>
+          <div className="flex-none w-8">i</div>
+        </div>
       </AntdButton>
     </div>
   );
